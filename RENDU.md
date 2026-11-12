@@ -39,19 +39,26 @@
 
 9. Sur quels nœuds se trouvent vos 3 réplicas ? Collez la sortie de `kubectl get pods -l app=site -o wide`.
    ```
+   site-75775484b-z2wlv   1/1     Running   0          9m34s   10.42.2.7   k3d-lab-server-0   <none>           <none>
+   web-68d995574f-tfdgj   1/1     Running   0          29m     10.42.0.5   k3d-lab-agent-0    <none>           <none>
+   site-75775484b-52d95   0/1     Pending   0          0s      <none>      <none>             <none>           <none>
+   site-75775484b-khcp8   0/1     Pending   0          0s      <none>      <none>             <none>           <none>
+   site-75775484b-52d95   0/1     Pending   0          0s      <none>      k3d-lab-agent-1    <none>           <none>
+   site-75775484b-khcp8   0/1     Pending   0          0s      <none>      k3d-lab-agent-0    <none>           <none>
 
+   les 3 replicas se trouve sur les noeuds agent 0 et agent 1.
    ```
 10. Avec l'image `nginx:9.99`, quel statut avait le pod ? Quelle commande vous a donné la cause ?
-    >
+    >le pod avait le status "ErrImagePull" et "ImagePullBackOff".
 11. Pendant la panne, le site restait-il accessible ? Pourquoi ?
-    >
+    >Oui pedant la panne le site restait accessible. Parceque Kubernetes distribue la mise à jour pod par pod et vue que le premier donne un erreur les autre ne la reçois pas et continue à fonctionner.
 
 ## Exercice 6 — Portainer & Mario
 
 12. URL publique de votre Mario :
-    >
+    >https://stunning-trout-6vppvpw5xpxrhqj-8585.app.github.dev/
 13. Retrouvez le Deployment `mario` en ligne de commande. Portainer et `kubectl` parlent-ils au même composant ? Lequel ?
-    >
+    >Oui portainer et kubectl parlent au même composant
 
 ## Bonus (facultatif)
 

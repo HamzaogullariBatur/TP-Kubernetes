@@ -10,9 +10,9 @@
 ## Exercice 1 — Cluster
 
 1. Combien de nœuds affiche `kubectl get nodes` ? Quel est le rôle de chacun ?
-   >
+   >Kubectl get nodes affiches 3 noeds, 1 serveur/control plan et 2 agent/worker.
 2. Que montre `docker ps` ? Qu'est-ce qu'un « nœud » dans k3d, concrètement ?
-   >
+   >docker ps affiche 4 conteneurs docker, le lab kubernetes et ses 3 noeuds. Concrètement un noeud dans k3d est un conteneur docker.
 
 ## Exercice 2 — Premier déploiement
 

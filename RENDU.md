@@ -17,16 +17,16 @@
 ## Exercice 2 — Premier déploiement
 
 3. Quels objets Kubernetes ont été créés par `kubectl create deployment` ? (indice : `kubectl get all`)
-   >
+   >deployment.apps/web
 4. Vous avez supprimé le pod `web-...` : que s'est-il passé, et pourquoi ?
    >
 
 ## Exercice 3 — Modifier un conteneur en direct
 
 5. Après suppression du pod, votre message « Bienvenue... » a-t-il survécu ? Pourquoi ?
-   >
+   >non, la suppression du pod signifie aussi la suppression du serveur web qui heberge notre message de bienvenue
 6. Pourquoi le `port-forward` a-t-il cessé de fonctionner après la suppression du pod ?
-   >
+   >comme le pod a été supprimé et remplacer par le nouveau le nouveau port n'est pas encore reconnu par le 'port-forward'.
 
 ## Exercice 4 — Déclaratif
 

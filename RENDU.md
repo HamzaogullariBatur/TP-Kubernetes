@@ -19,7 +19,7 @@
 3. Quels objets Kubernetes ont été créés par `kubectl create deployment` ? (indice : `kubectl get all`)
    >deployment.apps/web
 4. Vous avez supprimé le pod `web-...` : que s'est-il passé, et pourquoi ?
-   >
+   >le pod est supprimer puis remplacer par un nouveau.
 
 ## Exercice 3 — Modifier un conteneur en direct
 

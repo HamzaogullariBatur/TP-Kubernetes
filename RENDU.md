@@ -31,9 +31,9 @@
 ## Exercice 4 — Déclaratif
 
 7. Quelle différence entre `kubectl create` et `kubectl apply` ?
-   >
+   >kubectl create permet de créer une ressource Kubernetes. kubectl apply permet de créer une ressource si elle n'existe pas, ou de mettre à jour une ressource si elle existe déjà.
 8. À quoi sert le `selector` d'un Service ? Que se passe-t-il s'il ne correspond à aucun pod ?
-   >
+   >Le selector d'un Service Kubernetes sert à identifier les Pods auxquels le Service doit envoyer le trafic réseau. Il permet donc de faire le lien entre un Service et les Pods qui doivent recevoir les requêtes.
 
 ## Exercice 5 — Scaling & mises à jour
 
